@@ -59,6 +59,28 @@ public class Scenario1 extends BaseClass
 
 		Assert.assertEquals(true, filterapplied.isDisplayed());
 		System.out.println("Three Filters Are Applied");
+		
+		// verifying 1st filter tag 
+		WebElement firstfiltertag = driver.findElement(By.xpath("//span[text()='Screen Size: 6 in or More']"));
+		firstfiltertag.getText();
+		System.out.println(firstfiltertag);
+		Assert.assertEquals(true, firstfiltertag.isDisplayed());
+		System.out.println("First Filter Applied");
+		
+		// verifying 2nd filter tag
+		WebElement secondfiltertag = driver.findElement(By.xpath("//span[text()='Price: $100.00 to $200.00']"));
+		secondfiltertag.getText();
+		System.out.println(secondfiltertag);
+		Assert.assertEquals(true, secondfiltertag.isDisplayed());
+		System.out.println("second Filter Applied");
+		
+		//verifying 3rd filter tag
+		WebElement thirdfiltertag = driver.findElement(By.xpath("//span[text()='Item Location: Worldwide']"));
+		thirdfiltertag.getText();
+		System.out.println(thirdfiltertag);
+		Assert.assertEquals(true, thirdfiltertag.isDisplayed());
+		System.out.println("third Filter Applied");
+		
 
 		driver.close();
 
